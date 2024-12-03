@@ -1,0 +1,27 @@
+ <svg
+    class="learnworlds-divider bg-[#505BA0] w-full h-[210px]"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1000 407.65"
+    preserveAspectRatio="none"
+    id="shape"
+    >
+    <path
+        class="learnworlds-divider-fill js-learnworlds-divider-fill"
+        d="M751.32 187.47C613 235 462.72 218.9 318.61 225    200.89 230 48.86 251.53 0 407.65h1000V0c-64.23 92.19-152 154.24-248.68 187.47z"
+        style="opacity: 0.25"
+    ></path>
+
+    <path
+        class="learnworlds-divider-fill js-learnworlds-divider-fill"
+        d="M751.32 187.47C613 235 462.72 218.9 318.61 225 200.89 230 48.86 251.53 0 407.65h1000V0c-64.23 92.19-152 154.24-248.68 187.47z"
+        style="opacity: 0.25"
+    ></path>
+
+    <path
+        class="learnworlds-divider-fill js-learnworlds-divider-fill"
+        d="M777.61 210.75c-123.72 42.52-258.09 28.11-387 33.57-105.24 4.46-241.2 23.68-284.89 163.33H1000V43.1C942.56 125.54 864.09 181 777.61 210.75z"
+        style="opacity: 0.3;"
+
+    ></path>
+              
+    </svg>

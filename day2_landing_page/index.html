@@ -4,26 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Apna Collage</title>
     <style>
       * {
         font-family: "Poppins", sans-serif;
         box-sizing: border-box;
+        scrollbar-width: thin;
       }
     </style>
   </head>
   <body class="bg-gray-100 h-screen">
-    <!-- Header -->
-    <div class="flex justify-between items-center px-28 w-full h-16 border-b-2">
-      <div class="text-centner">
-        <span class="text-black font-bolder">Apna</span>
-        <br />
-        <span class="text-orange-500 font-bolder">Collage</span>
-      </div>
-      <div class="flex items-center gap-8">
-        <a
-          href="#"
-          class="bg-indigo-500 px-4 py-2 text-white font-bold rounded-lg"
+    <div
+      class="sticky top-0 z-20 bg-white flex justify-between items-center py-10 px-4 lg:px-28 w-full h-16"
+    >
+      <img src="./apna-collage-logo.png" width="100px" alt="" />
+      <button class="text-2xl font-bold lg:hidden">&#9776;</button>
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="#" class="bg-indigo-500 px-4 py-2 text-white font-bold rounded"
           >New Sigma 5.0</a
         >
         <a href="#">DSA Sheet</a>
@@ -31,96 +35,255 @@
         <a href="#">Login</a>
         <a
           href="#"
-          class="border-2 border-indigo-500 text-indigo-500 px-4 py-2 rounded-lg font-bold"
+          class="border-2 border-indigo-500 text-indigo-500 px-4 py-1.5 rounded font-bold"
           >Sign up</a
         >
       </div>
     </div>
+    <!-- Header -->
     <!-- Hero section -->
     <div
-      class="h-[calc(100vh-64px)] w-full bg-gradient-to-r from-gray-100 to-indigo-100 flex"
+      class="h-[calc(100vh-64px)] w-full bg-gradient-to-r from-gray-100 to-indigo-100 flex flex-col md:flex-row"
     >
-      <div class="w-[50%] h-full flex items-center justify-center">
-        <div>
-          <div class="mb-10">
-            <p class="text-2xl font-semibold">Learn & become the</p>
-            <p class="text-2xl font-semibold">Top 1% software developer</p>
-            <p class="text-xl">Sigma - DSA + Web Development</p>
+      <div
+        class="w-full mt-16 sm:mt-10 md:mt-0 md:w-[50%] h-full flex items-center justify-center"
+      >
+        <div class="flex flex-col gap-10">
+          <div class="flex flex-col gap-2 md:gap-5">
+            <p class="text-2xl sm:text-3xl font-bold">Learn & become the</p>
+            <p class="text-2xl sm:text-3xl font-bold text-indigo-500">
+              Top 1% software developer
+            </p>
+            <p
+              class="typewrite text-lg sm:text-xl"
+              data-period="2000"
+              data-type='[ "Sigma - DSA + Web Development", "Alpha - DSA.", "C++ DSA", "Delta - Web Development|", "I Love to Develop." ]'
+            >
+              <span class="wrap"></span>
+            </p>
           </div>
           <a
             href=""
-            class="bg-indigo-500 py-4 px-8 text-white rounded-lg font-bold"
-            >Ultimate Placement Solution</a
+            class="bg-indigo-500 py-4 px-8 text-white rounded font-bold"
+            ><span class="text-yellow-500">Ultimate</span> Placement Solution <i class="fa-solid fa-angle-right ml-2"></i></a
           >
         </div>
       </div>
-      <div class="w-[50%] h-full px-28 flex items-center">
+      <div
+        class="w-full p-8 md:p-0 md:w-[50%] h-full px-4 lg:px-28 flex items-center"
+      >
         <div class="overflow-hidden rounded-t-full w-full">
           <img src="./sharda.png" alt="" />
         </div>
       </div>
     </div>
     <!-- Community section -->
-    <div class="py-10 bg-indigo-500 text-white font-bold">
-      <h1 class="font-bolder text-2xl text-center">
+    <div
+      class="py-10 bg-indigo-500 text-white font-bold bg-[url('./img/community.svg')] relative"
+    >
+      <h1 class="font-bolder text-xl md:text-2xl text-center">
         India's Most Loved Coding Community ❤️
       </h1>
-      <div class="px-28 flex items-center justify-evenly mt-5">
+      <div
+        class="px-4 lg:px-28 flex flex-col md:flex-row gap-5 items-center justify-evenly mt-5"
+      >
         <div class="text-center">
-          <span class="text-5xl">😈</span>
-          <p class="text-center mt-2">1.5M+ Members</p>
+          <p class="text-lg sm:text-2xl"><i class="fa-solid fa-users  mr-2"></i><span class="font-bold">6000000+</span></p>
+          <p class="text-center sm:text-lg  mt-2">Happy Learners</p>
         </div>
         <div class="text-center">
-          <span class="text-5xl">🤩</span>
-          <p class="text-center mt-2">1.5M+ Members</p>
+          <p class="text-lg sm:text-2xl"> <i class="fa-solid fa-hand-holding-heart mr-2"></i> <span class="font-bold">2 Crore+</span></p>
+          <p class="text-center sm:text-lg mt-2">monthly views</p>
         </div>
         <div class="text-center">
-          <span class="text-5xl">😎</span>
-          <p class="text-center mt-2">1.5M+ Members</p>
+          <p class="text-lg sm:text-2xl"><i class="fa-solid fa-link text-2xl mr-2"></i><span>6000000+</span></p></p>
+          <p class="text-center sm:text-lg mt-2">new monthly subscribers</p>
         </div>
       </div>
     </div>
     <!-- Placement Section  -->
+    <div class="flex items-center justify-center gap-6 py-20 flex-col bg-white">
+      <h1 class="md:text-2xl text-indigo-500">New Placement Prep Batch🔥</h1>
+      <h1 class="md:text-2xl">Sigma 5.0 : DSA + Development + APTITUDE</h1>
+      <h1 class="sm:text-lg">Start your placement preparation today!</h1>
+      <button
+        class="bg-[royalblue] text-white font-bold py-4 px-8 rounded linner duration-500 hover:rounded-full shadow-lg"
+      >
+        Explore <i class="fa-solid fa-angles-right ml-2"></i>
+      </button>
+    </div>
     <!-- Company Section -->
+    <div>
+      <h1 class="text-xl md:text-2xl lg:text-3xl text-center my-12">
+        Thousands of students achieved their
+        <span class="text-indigo-500 font-bold">dream job at</span>
+      </h1>
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 px-4 lg:px-28"
+      >
+        <div class="flext items-center justify-center">
+          <img src="./img/amazon.png" class="w-32" alt="company-img" />
+        </div>
+        <div><img src="./img/google.png" class="w-32" alt="company-img" /></div>
+        <div>
+          <img src="./img/mirosoft.png" class="w-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/goldman.png" class="w-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/paypal.png" class="w-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/sumsung.png" class="w-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/skyforce.png" class="w-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/net-app.png" class="w-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/hitachi.png" class="w-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/jpmorgan.png" class="w-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/ibm.png" class="w-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/dell.png" class="w-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/deloitte.png" class="w-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/kpmg.png" class="w-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/isro-.png" class="h-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/mersadise.png" class="w-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/ey.png" class="w-32" alt="company-img" />
+        </div>
+        <div>
+          <img src="./img/airtal.png" class="w-32" alt="company-img" />
+        </div>
+      </div>
+      <h1 class="text-center text-gray-500">+ many more</h1>
+    </div>
+
     <!-- Our Selected Studet -->
-    <!-- On a misstion to tech millions -->
-    <!-- Footer -->
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 my-16 gap-8 px-28"
-    >
-      <div>
-        <div class="text-centner">
-          <span class="text-black font-bolder">Apna</span>
-          <br />
-          <span class="text-orange-500 font-bolder">Collage</span>
-        </div>
-        <p>Where education meets real-world needs.</p>
+    <div class="px-4 md:px-28 border-t border-black mt-5">
+      <h1 class="text-center font-bold text-2xl my-8">Our Selected Students</h1>
+      <div
+        class="w-full grid grid-cols-1 md:grid-cols-2 gap-y-4 sm:gap-y-6 md:gap-y-8"
+      >
+        <div
+          class="h-96 bg-[url('./img/3c8e8869b39f47e49ac0fd0d8295f371.png')] bg-contain bg-center bg-no-repeat"
+        ></div>
+        <div
+          class="h-96 bg-[url('./img/18f65e833dc86ebe262d1df17d811354.png')] bg-contain bg-center bg-no-repeat"
+        ></div>
+        <div
+          class="h-96 bg-[url('./img/53f99f7c23681c97140e69b6859dcec2.png')] bg-contain bg-center bg-no-repeat"
+        ></div>
+        <div
+          class="h-96 bg-[url('./img/91b677b6dc088223dd79e464a42d4720.png')] bg-contain bg-center bg-no-repeat"
+        ></div>
+        <div
+          class="h-96 bg-[url('./img/797a69b7d94d104d723f7a7166ff9b5c.png')] bg-contain bg-center bg-no-repeat"
+        ></div>
+        <div
+          class="h-96 bg-[url('./img/9307f7a34e36f99fa73324192dc257b5.png')] bg-contain bg-center bg-no-repeat"
+        ></div>
+        <div
+          class="h-96 bg-[url('./img/61364d7b08aa37125debd38bbe0b7199.png')] bg-contain bg-center bg-no-repeat"
+        ></div>
+        <div
+          class="h-96 bg-[url('./img/70217e38fe7d9f60149a932aaed98496.png')] bg-contain bg-center bg-no-repeat"
+        ></div>
+        <div
+          class="h-96 bg-[url('./img/b71a8bf79d28cd11145e6bbbc9e7893a.png')] bg-contain bg-center bg-no-repeat"
+        ></div>
+        <div
+          class="h-96 bg-[url('./img/ba187d253f8df0729c893b06d417e35c.png')] bg-contain bg-center bg-no-repeat"
+        ></div>
+        <div
+          class="h-96 bg-[url('./img/bf25eb13370c956cd7202501742abbc1.png')] bg-contain bg-center bg-no-repeat"
+        ></div>
+        <div
+          class="h-96 bg-[url('./img/c983a0358971c733e62bccda3f126749.png')] bg-contain bg-center bg-no-repeat"
+        ></div>
+        <div
+          class="h-96 bg-[url('./img/d77832c3f3e1ac2f3727ff299da4bcd7.png')] bg-contain bg-center bg-no-repeat"
+        ></div>
+        <div
+          class="h-96 bg-[url('./img/f23a7e294087a8dbf049cb82bb3e7ce2.png')] bg-contain bg-center bg-no-repeat"
+        ></div>
       </div>
-
-      <div class="flex flex-col font-bold text-indigo-500 gap-5">
-        <h1 class="font-semibold text-xl">HELPFUL LINKS</h1>
-        <div class="flex flex-col">
-          <a href="">Courses</a> <a href="">Privacy policy</a>
-          <a href="Refund Policy"></a> <a href="">Terms & Conditions</a>
-        </div>
-      </div>
-
-      <div class="flex flex-col font-bold text-indigo-500 gap-5">
-        <h1 class="font-semibold text-xl">HELPFUL LINKS</h1>
-        <div class="flex flex-col">
-          <a href="">Courses</a> <a href="">Privacy policy</a>
-          <a href="Refund Policy"></a> <a href="">Terms & Conditions</a>
-        </div>
-      </div>
-
-      <div class="flex flex-col font-bold text-indigo-500 gap-5">
-        <h1 class="font-semibold text-xl">HELPFUL LINKS</h1>
-        <div class="flex flex-col">
-          <a href="">Courses</a> <a href="">Privacy policy</a>
-          <a href="Refund Policy"></a> <a href="">Terms & Conditions</a>
-        </div>
+      <div class="flex justify-center w-full my-8">
+        <button class="font-bold bg-indigo-500 rounded text-white px-8 py-4 mx-auto">
+          See More <i class="fa-solid fa-angle-right ml-2"></i>
+        </button>
       </div>
     </div>
-    <h1 class="pb-8 font-semibold text-xl text-center">Copyright © 2024</h1>
+
+    <!-- On a misstion to tech millions -->
+    <div class="bg-white">
+      <div class="mt-10 px-4 lg:px-28 py-4">
+        <h1 class="text-2xl my-8 font-bold text-center">
+          On a mission to teach Millions
+        </h1>
+        <img src="./img/trophy.jpeg" class="w-full rounded-xl" alt="" />
+      </div>
+      <!-- Footer -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 my-16 gap-8 px-4 lg:px-28"
+      >
+        <div>
+          <img src="./apna-collage-logo.png" class="w-32" alt="" />
+          <p class="text-indigo-500 mt-2 sm:text-xl">
+            Where education meets real-world needs.
+          </p>
+        </div>
+
+        <div class="flex flex-col  gap-5 text-indigo-500">
+          <h1 class="font-semibold text-xl font-bold">HELPFUL LINKS</h1>
+          <div class="flex flex-col">
+            <a href=""><i class="fa-solid fa-angle-right mr-4"></i>Courses</a>
+            <a href=""><i class="fa-solid fa-angle-right mr-4"></i>Privacy policy</a>
+            <a href=""><i class="fa-solid fa-angle-right mr-4"></i>Refund Policy</a>
+            <a href=""><i class="fa-solid fa-angle-right mr-4"></i>Terms & Conditions</a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-5">
+          <h1 class="font-semibold text-xl uppercase font-bold">Connect with us</h1>
+          <div class="flex flex-col text-gray-700">
+            <a href=""><i class="fa-solid fa-envelope mr-1"></i>alpha@apnacollege.in</a> 
+            <a href=""><i class="fa-solid fa-envelope mr-1"></i>delta@apnacollege.in</a>
+            <a href=""><i class="fa-solid fa-envelope mr-1"></i>sigma@apnacollege.in</a>
+            <a href=""><i class="fa-solid fa-user-gear mr-1"></i>Support Team : 10am-6pm</a>
+          </div>
+        </div>
+
+         <div class="flex flex-col  gap-5">
+          <h1 class="font-semibold text-xl font-bold">HELPFUL LINKS</h1>
+          <div class="flex flex-col text-indigo-500">
+            <a href="">Facebook<i class="fa-brands fa-facebook ml-1"></i></a>
+            <a href="">Twitter<i class="fa-brands fa-twitter ml-1"></i></a>
+            <a href="">Instagram<i class="fa-brands fa-instagram ml-1"></i></a> 
+            <a href="">Linkedin<i class="fa-brands fa-linkedin ml-1"></i></a>
+          </div>
+        </div>
+      </div>
+      <h1 class="pb-8 text-center">Copyright © 2024</h1>
+    </div>
+    <script src="./index.js"></script>
   </body>
 </html>
