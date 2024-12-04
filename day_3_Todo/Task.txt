@@ -1,0 +1,6 @@
+1 chage your todos Ui (buttons to connvert icons button)
+2 after edit click hide edit and show save button 
+3 after edit click cursor will come end of text
+4 after save click hide save and show edit
+5 button of fixed top right side 
+6 todo hight fix 200px or 300px or ect .. and your content overload so come scroll
