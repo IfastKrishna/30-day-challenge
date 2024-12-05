@@ -1,4 +1,12 @@
-let todos = JSON.parse(localStorage.getItem("todos")) || [];
+let todos = JSON.parse(localStorage.getItem("todos")) || [
+  "Complete the project outline: Finalize the scope and objectives before moving forward.",
+  "Fix reported bugs: Address and resolve issues reported by the QA team.",
+  "Review the latest pull requests: Ensure all code changes align with project standards.",
+  "Design a new feature prototype: Create a mockup or prototype for the proposed feature.",
+  "Optimize database queries: Improve performance by refining inefficient queries.",
+  "Update documentation: Add missing details and update outdated sections.",
+  "Test cross-browser compatibility: Ensure the app works seamlessly on all major browsers.",
+];
 const form = document.querySelector("#todo-form");
 const todoList = document.querySelector("#todo-list");
 
