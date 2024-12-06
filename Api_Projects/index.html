@@ -1,0 +1,101 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-gray-900 h-[50vh] flex justify-center items-center">
+      <h1 class="text-3xl font-bold text-white">Movie List</h1>
+    </header>
+    <section class="search-section flex justify-center items-center py-4">
+      <input
+        type="text"
+        id="movie-search"
+        class="border border-gray-300 p-2 rounded-lg"
+        placeholder="Search for a movie..."
+      />
+      <button
+        id="search-button"
+        class="ml-2 bg-blue-500 text-white p-2 rounded-lg"
+      >
+        Search
+      </button>
+    </section>
+
+    <main class="container mx-auto p-4 pt-6 md:p-6 lg:p-12">
+      <div class="flex flex-wrap justify-center movie-list">
+        <!-- movie-list-item.html -->
+      </div>
+    </main>
+    <script>
+      const appendMovie = (movie) => {
+        const movieList = document.querySelector(".movie-list");
+        const movieListItem = document.createElement("div");
+        // movieListItem.classList.add("movie-list-item");
+        movieListItem.innerHTML = `
+          <img src="${movie.Poster}" alt="${movie.Title}" class="movie-poster" />
+          <div class="p-4">
+            <h2 class="movie-title">${movie.Title}</h2>
+            <p class="movie-rating">Rating: ${movie.imdbRating}/10</p>
+          </div>
+        `;
+        movieList.prepend(movieListItem);
+      };
+
+      const setLoading = (loading, defultText) => {
+        const btn = document.querySelector("#search-button");
+
+        if (loading) {
+          btn.innerHTML = `
+            loading....
+          `;
+        } else {
+          btn.innerHTML = defultText;
+        }
+      };
+
+      const searchMode = async (title) => {
+        const url = `http://www.omdbapi.com/?apikey=51f7e150&s=${title}`;
+        try {
+          //   setLoading(true, "loading....");
+          //   const response = await fetch(url);
+          //   const data = await response.json();
+          //   setLoading(false, "Search");
+          //   appendMovie(data);
+
+          setLoading(true, "loading....");
+          fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+              data?.Search.map((m) => appendMovie(m));
+              console.log(data);
+              setLoading(false, "Search");
+            });
+        } catch (error) {
+          console.error(error);
+        }
+      };
+
+      document.getElementById("search-button").addEventListener("click", () => {
+        const movieTitle = document.getElementById("movie-search").value;
+        if (movieTitle) {
+          searchMode(movieTitle);
+        }
+      });
+    </script>
+  </body>
+</html>

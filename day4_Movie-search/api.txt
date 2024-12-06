@@ -1,0 +1,7 @@
+https://www.omdbapi.com/
+
+taks 
+
+1 how print data from xml 
+2 check every paramter for what data come
+3 make your  own mover search webite
