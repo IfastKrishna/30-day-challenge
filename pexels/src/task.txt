@@ -1,0 +1,5 @@
+1. Read the pexels doumations 
+2. Make pexels clone.
+3. Pagination searning and load more button.
+4. live and shere.
+
