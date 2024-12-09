@@ -1,4 +1,4 @@
-const pexelsApi = "Z6OvRwIFp0ivGogCdePfz0g1bR9BwlRGluTD4ifSU7EYyhuWcCAh8lDA";
+const pexelsApi = "Z6OvRwIFp0ivGsdlfsdlfePfz0g1sdfsdlkfsasdlfaslsdfTD4ifSU7EYyhuWcCAh8lDA";
 
 
 const fetchImages = async (query) => {
