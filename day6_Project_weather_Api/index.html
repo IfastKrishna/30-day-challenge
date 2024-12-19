@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <input type="text" id="city" placeholder="Enter city name">
+    <button onclick="fetchWeather()">Get Weather</button>
+    <div id="weatherData"></div>
+
+    <script>
+        const apiKey = '4b2da86c066e1f588987f59fe5d9861a'; // openweathermap api key
+
+        const getLatLon = async (city) => {
+            const url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`;
+            const response = await fetch(url);
+            const data = await response.json();
+            console.log(data);
+            const lat = data[0].lat;
+            const lon = data[0].lon;
+            return {lat, lon};
+        }
+
+        const fetchWeatherData = async (city) => {
+            const {lat, lon} = await getLatLon(city);
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+            const response = await fetch(url);
+            const data = await response.json();
+            return data;
+        }
+
+        const fetchWeather = async () => {
+            const city = document.getElementById('city').value;
+            const weatherData = await fetchWeatherData(city);
+            displayWeatherData(weatherData);
+        }
+
+        const displayWeatherData = (data) => {
+            const weatherDiv = document.getElementById('weatherData');
+            weatherDiv.innerHTML = `
+                <h2>Weather in ${data.name}</h2>
+                <p>Temperature: ${data.main.temp} °C</p>
+                <p>Weather: ${data.weather[0].description}</p>
+                <p>Humidity: ${data.main.humidity}%</p>
+                <p>Wind Speed: ${(data.wind.speed * 3.6).toFixed(2)} km/h</p>
+            `;
+        }
+    </script>
+</body>
+</html>
