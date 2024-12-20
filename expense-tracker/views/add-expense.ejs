@@ -1,0 +1,24 @@
+<%-include("partials/header")%>
+<div class="my-6">
+    <a href="/" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Dashbarod</a>
+</div>
+<form action="/add-expense" method="POST" class="mb-6 bg-white p-4 shadow-md rounded-md">
+    <div class="mb-4">
+      <input type="text" name="name" class="w-full p-2 border rounded-md" placeholder="Expense Name" required />
+    </div>
+    <div class="mb-4">
+      <select name="category" class="w-full p-2 border rounded-md" required>
+        <option value="">Select Category</option>
+        <option value="Food">Food</option>
+        <option value="Education">Education</option>
+        <option value="Housing">Housing</option>
+        <option value="Transportation">Transportation</option>
+        <option value="Others">Others</option>
+      </select>
+    </div>
+    <div class="mb-4">
+      <input type="number" name="amount" class="w-full p-2 border rounded-md" placeholder="Amount ($)" required />
+    </div>
+    <button type="submit" class="w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">Add Expense</button>
+  </form>
+<%-include("partials/footer")%>

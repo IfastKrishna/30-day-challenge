@@ -1,0 +1,41 @@
+<%- include('partials/header') %>
+<div class="container mx-auto p-6">
+  <h1 class="text-2xl font-bold text-center mb-6">Expense Tracker</h1>
+  <a href="/dashboard" class="py-2 px-4 shadow-sm rounded-md bg-green-500 text-white">Dashboard</a>
+
+  <div class="bg-green-100 text-green-700 p-4 rounded-md text-center my-6">
+    <h2>Balance: $<span class="font-bold"><%= balance.toFixed(2) %></span></h2>
+  </div>
+
+  <form action="/add-expense" method="POST" class="mb-6 bg-white p-4 shadow-md rounded-md">
+    <div class="mb-4">
+      <input type="text" name="name" class="w-full p-2 border rounded-md" placeholder="Expense Name" required />
+    </div>
+    <div class="mb-4">
+      <select name="category" class="w-full p-2 border rounded-md" required>
+        <option value="">Select Category</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Utilities">Utilities</option>
+        <option value="Others">Others</option>
+      </select>
+    </div>
+    <div class="mb-4">
+      <input type="number" name="amount" class="w-full p-2 border rounded-md" placeholder="Amount ($)" required />
+    </div>
+    <button type="submit" class="w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">Add Expense</button>
+  </form>
+
+  <ul>
+    <% expenses.forEach(expense => { %>
+      <li class="flex justify-between items-center bg-gray-100 p-4 rounded-md mb-2">
+        <span><%= expense.name %> ($<%= expense.amount.toFixed(2) %>) - <%= expense.category %></span>
+        <form action="/delete-expense/<%= expense._id %>" method="POST">
+          <button type="submit" class="text-red-500 hover:text-red-600">Delete</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+</div>
+<%- include('partials/footer') %>

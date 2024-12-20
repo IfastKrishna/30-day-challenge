@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+<div class="my-6">
+    <a href="/add-expense" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Add Expense</a>
+</div>
+<div class="bg-blue-100 text-blue-700 p-4 rounded-md text-center">
+    <h2>Total Spent: ₹<span class="font-bold"><%= totalAmount.toFixed(2) %></span></h2>
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-6">
+    <% expenses.forEach(expense => { %>
+
+      <div class="p-4 bg-white shadow-md rounded-md">
+        <a href="/delete-expense/<%= expense?._id %>" class="hover:underline">Delete</a>
+        <h3 class="text-lg font-bold mb-2">Name :: <%= expense.name %></h3>
+        <h3 class="text-lg  mb-2">Category :: <%= expense.category %></h3>
+        <p>Total: $<%= expense.amount.toFixed(2) %></p>
+      </div>
+    <% }) %>
+</div>
+<%- include('partials/footer') %>
