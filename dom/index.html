@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+        .red {
+            background-color: red;
+
+        }
+        .green {
+            background-color: green;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, possimus aliquid explicabo perspiciatis eligendi quos <span class="highliht">illum enim corrupti,</span> ut commodi recusandae rerum minus fugit harum mollitia asperiores delectus obcaecati officia?</p>
+    <button>Counter</button>
+
+    <script>
+        const log = console.log;
+        const body = document.querySelector("body");
+
+        
+        let style = {
+            backgroundColor: "red",
+            color: "white",
+            padding: "10px",
+            borderRadius: "5px",
+            border: "none",
+            cursor: "pointer"
+        }
+
+       body.classList.add("red");
+
+        function changeColor () {
+            body.style.backgroundColor =  `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+        }
+       
+    //    setTimeout(changeColor, 5000);
+    function updateClock() {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        changeColor();
+        body.querySelector("h1").innerHTML = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); // Initial call to display clock immediately
+      
+
+
+    </script>
+</body>
+</html>

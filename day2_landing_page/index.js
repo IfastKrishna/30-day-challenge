@@ -56,3 +56,23 @@ window.onload = function () {
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000}";
   document.body.appendChild(css);
 };
+
+// JavaScript for toggling sidebar
+const sidebar = document.getElementById("sidebar");
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const closeSidebar = document.getElementById("close-sidebar");
+
+hamburgerMenu.addEventListener("click", () => {
+  sidebar.classList.remove("-translate-x-full");
+});
+
+closeSidebar.addEventListener("click", () => {
+  sidebar.classList.add("-translate-x-full");
+});
+
+// Optional: Close sidebar when clicking outside of it
+document.addEventListener("click", (e) => {
+  if (!sidebar.contains(e.target) && !hamburgerMenu.contains(e.target)) {
+    sidebar.classList.add("-translate-x-full");
+  }
+});

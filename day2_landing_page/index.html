@@ -21,25 +21,48 @@
     </style>
   </head>
   <body class="bg-gray-100 h-screen">
-    <div
-      class="sticky top-0 z-20 bg-white flex justify-between items-center py-10 px-4 lg:px-28 w-full h-16"
+   <!-- Header -->
+  <div class="sticky top-0 z-20 bg-white flex justify-between items-center py-10 px-4 lg:px-28 w-full h-16">
+    <img src="./apna-collage-logo.png" width="100px" alt="" />
+    <button
+      class="text-2xl font-bold lg:hidden"
+      id="hamburger-menu"
+      aria-label="Open Sidebar"
     >
-      <img src="./apna-collage-logo.png" width="100px" alt="" />
-      <button class="text-2xl font-bold lg:hidden">&#9776;</button>
-      <div class="hidden lg:flex items-center gap-8">
-        <a href="#" class="bg-indigo-500 px-4 py-2 text-white font-bold rounded"
-          >New Sigma 5.0</a
-        >
-        <a href="#">DSA Sheet</a>
-        <a href="#">New Courses</a>
-        <a href="#">Login</a>
-        <a
-          href="#"
-          class="border-2 border-indigo-500 text-indigo-500 px-4 py-1.5 rounded font-bold"
-          >Sign up</a
-        >
-      </div>
+      &#9776;
+    </button>
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="#" class="bg-indigo-500 px-4 py-2 text-white font-bold rounded">New Sigma 5.0</a>
+      <a href="#">DSA Sheet</a>
+      <a href="#">New Courses</a>
+      <a href="#">Login</a>
+      <a href="#" class="border-2 border-indigo-500 text-indigo-500 px-4 py-1.5 rounded font-bold">Sign up</a>
     </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div
+    id="sidebar"
+    class="fixed top-0 left-0 h-full bg-white shadow-lg w-64 transform -translate-x-full transition-transform duration-300 z-30 lg:hidden"
+  >
+    <div class="p-4 flex justify-between items-center border-b">
+      <img src="./apna-collage-logo.png" width="100px" alt="" />
+      <button
+        class="text-xl font-bold"
+        id="close-sidebar"
+        aria-label="Close Sidebar"
+      >
+        &times;
+      </button>
+    </div>
+    <div class="p-6 flex flex-col gap-4">
+      <a href="#" class="text-lg font-bold">New Sigma 5.0</a>
+      <a href="#">DSA Sheet</a>
+      <a href="#">New Courses</a>
+      <a href="#">Login</a>
+      <a href="#" class="border-2 border-indigo-500 text-indigo-500 px-4 py-1.5 rounded font-bold">Sign up</a>
+    </div>
+  </div>
     <!-- Header -->
     <!-- Hero section -->
     <div
